@@ -1,0 +1,2763 @@
+/* **********************************************
+Basic mechanics
+Hide all paragraphs by default
+Show them when they receive the class 'on'
+Hide them when they receive the class 'off'
+Feel free to adjust the defaults to your needs.
+********************************************** */
+#closed-captions {
+    z-index: ;
+    margin-left: 2em;
+}
+
+#closed-captions p {
+	opacity: 0;
+	transition: .05s;
+	position: absolute;
+}
+#closed-captions .on {
+	opacity: 1;
+}
+#closed-captions .off {
+	transition: .2s;
+	opacity: 0;
+}
+.voice1 {
+	font-style: italic;
+}
+
+/* **********************************************
+The first paragraph, with extended timing for 
+	all siblings. Basically what it does is that
+	it shows the text after a delay, which 
+	corresponds with the time that the word is
+	spoken.
+You probably want to change the styling.
+********************************************** */
+.p0 span {
+	opacity: 0;
+	font-family: Brenner Mono;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p0.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+    font-style: italic;
+}
+.p0.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .4s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .5s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s .7s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	margin-right: -.25em;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 2s;
+	font-weight: 800;
+}
+.p0.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 3s;
+	font-weight: 200;
+}
+.p0.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 3.2s;
+	font-weight: 200;
+    font-style: underline;
+}
+.p0.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 3.7s;
+	font-weight: 200;
+}
+.p1 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7;
+}
+.p1.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p1.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p2 span {
+    opacity: 0;
+    font-family: Brenner Mono;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff; 
+}
+.p2.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+    font-style: italic;
+}
+.p2.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p2.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .6s;
+	font-weight: 200;
+    margin-right: 0.1em;
+}
+.p3 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7;
+}
+.p3.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p3.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p3.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p3.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 400;
+}
+.p3.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.6s;
+	font-weight: 400;
+}
+.p3.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 400;
+}
+.p4 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7;
+}
+.p4.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.5s;
+	font-weight: 400;
+}
+.p4.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	font-weight: 400;
+}
+.p5 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7;
+}
+.p5.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.5s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 2.0s;
+	font-weight: 400;
+}
+.p5.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 2.4s;
+	font-weight: 400;
+}
+/* font nog veranderen*/
+.p6 span {
+	font-family: Brenner Mono;
+    color: #ffffff;
+}
+
+.p7 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7;
+}
+.p7.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 2.4s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 2.6s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 2.8s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 3.1s;
+	font-weight: 400;
+}
+.p7.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 3.5s;
+	font-weight: 400;
+}
+.p8 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p8.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-style: italic;
+    font-size: 2em;
+}
+.p9 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p9.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p10 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p10.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.9s;
+	font-weight: 400;
+}
+.p10.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p11 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p11.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p12 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p12.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p13 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p13.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p13.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p14 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p14.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p15 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p15.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p16 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p16.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.5s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 1.6s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(12) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(13) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 400;
+}
+.p16.on span:nth-of-type(14) {
+	opacity: 1;
+	transition: 0s 1.9s;
+	font-weight: 400;
+}
+.p17 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p17.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p18 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p18.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p19 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p19.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p20 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p20.on span {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p21 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p21.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.0s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p21.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 800;
+}
+.p22 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p22.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p23 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p23.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p24 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.4em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p24.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 700;
+}
+.p24.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.0s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 400;
+}
+.p24.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 400;
+}
+.p25 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p25.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p26 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p26.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p27 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.45em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p27.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p27.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 0.9s;
+	font-weight: 800;
+}
+.p28 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p28.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 1.5em;
+}
+.p29 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p29.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 400;
+}
+.p30 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.45em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p30.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p30.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p30.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p30.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p30.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p30.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 600;
+}
+.p31 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p31.on span {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p32 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.45em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p32.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 600;
+}
+.p32.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.0s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 200;
+}
+.p32.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 200;
+}
+.p33 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p33.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p34 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p34.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p35 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p35.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 0.9s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.0s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-weight: 200;
+}
+.p35.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 600;
+}
+.p36 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p36.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+    font-size: 2em;
+}
+.p37 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p37.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p38 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p38.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p38.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 600;
+}
+.p38.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p39 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p39.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p39.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+.p39.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 400;
+}
+.p40 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.55em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p40.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.9s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.6s;
+	font-weight: 200;
+}
+.p40.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 200;
+}
+.p41 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p41.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p41.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p41.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 400;
+}
+.p42 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p42.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p42.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p42.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p43 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p43.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p43.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p43.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 400;
+}
+.p44 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p44.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p44.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p45 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p45.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p45.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 600;
+}
+.p46 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p46.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p46.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p46.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p46.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p46.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p46.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p47 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p47.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p47.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 400;
+}
+.p47.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 400;
+}
+
+/* Scene 2 - Post Traumatic Baseline Test Insecure */
+
+.p48 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p48.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 400;
+}
+.p49 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p49.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p50 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p50.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p50.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 200;
+    font-size: 1.2em;
+}
+.p51 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p51.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p52 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p52.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 1.6s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(12) {
+	opacity: 1;
+	transition: 0s 1.9s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(13) {
+	opacity: 1;
+	transition: 0s 2.0s;
+	font-weight: 200;
+}
+.p52.on span:nth-of-type(14) {
+	opacity: 1;
+	transition: 0s 2.2s;
+	font-weight: 600;
+}
+.p52.on span:nth-of-type(15) {
+	opacity: 1;
+	transition: 0s 2.6s;
+	font-weight: 200;
+}
+.p53 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p53.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p54 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p54.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.5s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 2.0s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 2.3s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 2.5s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 2.8s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 3.0s;
+	font-weight: 200;
+}
+.p54.on span:nth-of-type(12) {
+	opacity: 1;
+	transition: 0s 3.2s;
+	font-weight: 600;
+}
+.p55 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p55.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p56 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p56.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+    font-size: 0.9em;
+}
+.p57 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p57.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p57.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 400;
+}
+.p57.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p58 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.8em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p58.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p58.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p58.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p59 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p59.on span {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p60 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.8em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p60.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p61 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p61.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p61.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 600;
+}
+.p61.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.8s;
+	font-weight: 200;
+} 
+.p62 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.7em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p62.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p63 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p63.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 1.3s;
+	font-weight: 200;
+}
+.p63.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	font-weight: 600;
+}
+.p64 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.7em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p64.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p65 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p65.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+}
+.p65.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p66 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.67em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p66.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p66.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p67 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p67.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 600;
+}
+.p68 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.67em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p68.on span {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p69 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p69.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p69.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 600;
+}
+.p69.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p70 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.67em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p70.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p70.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p70.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p71 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p71.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p71.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 600;
+}
+.p71.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 600;
+}
+.p72 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.6em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p72.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p72.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p72.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 200;
+}
+.p73 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p73.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p73.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 600;
+}
+.p73.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.5s;
+	font-weight: 600;
+}
+.p74 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.6em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p74.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p74.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p74.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p75 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p75.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p75.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p75.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 600;
+}
+.p76 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.6em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p76.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p76.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p76.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p77 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p77.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p77.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p77.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p77.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 600;
+}
+.p77.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p78 span {
+    opacity: 0;
+    font-family: Brenner Sans;
+    color: aqua;
+    font-size: 0.55em;
+    text-shadow: 0em 0em 3em #b7f9f7; 
+}
+.p78.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+	font-weight: 200;
+}
+.p78.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.3s;
+	font-weight: 200;
+}
+.p78.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p78.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 200;
+}
+.p78.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.8s;
+	font-weight: 200;
+}
+.p79 span {
+    opacity: 0;
+	font-family: Brenner Mono;
+    font-style: italic;
+    color: #ff1d25;
+    font-size: 1.3em;
+    text-shadow: 0em 0em 3em #ffffff;
+}
+.p79.on span:first-of-type {
+	opacity: 1;
+	transition: 0s 0.1s;
+	font-weight: 200;
+}
+.p79.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 0.2s;
+	font-weight: 200;
+}
+.p79.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 0.4s;
+	font-weight: 200;
+}
+.p79.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 0.6s;
+	font-weight: 600;
+}
+.p79.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 0.7s;
+	font-weight: 600;
+}
+.p79.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.0s;
+	font-weight: 600;
+}
+
+
+/* Styling rest van de website */
+
+body {
+    background-color: #292b39;
+}
+
+h1 {
+    color: #cccccc;
+    font-family: monospace;
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+#closed-captions {
+    padding: 1em;
+    margin-top: 1.5em;
+    margin-left: 5em;
+    width: 57.4%;
+    height: 3.5em;
+    background: #1c1e26;
+    border: 1em;
+    border-color: #42475b;
+}
+
+#closed-captions p {
+    width: 57.4%;
+}
+
+img {
+    width: 13em;;
+    border-color: #42475b;
+}
+
+#video-placeholder {
+    width: 60%;
+    margin-top: 2em;
+    margin-left: 5em;
+    z-index: 3;
+}
+
+.textbox {
+    width: 48.4em;
+    border-color: #42475b;
+    margin-top: 2em;
+    margin-left: 2em;
+    background-color: #1c1e26;
+}
+
+.test {
+    width: 22%;
+    float: right;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 3.2em;
+}
+
+.test p {
+    font-family: monospace;
+    color: #cccccc;
+    width: 13em;
+    font-size: 12pt;
+    margin: 0.3em
+}
+
+/* Trillen van Beeld */
+
+.sound0 {
+    animation: shake 1s linear 1 forwards;
+}
+
+@keyframes shake {
+    0% {transform: translate(0,0);}
+    10% {transform: translate(-1vw, 0);}
+    20% {transform: translate(1vw, 0);}
+    30% {transform: translate(-1vw, 0);}
+    40% {transform: translate(1vw, 0);}
+    50% {transform: translate(-1vw, 0);}
+    60% {transform: translate(1vw, 0);}
+    70% {transform: translate(-1vw, 0);}
+    80% {transform: translate(1vw, 0);}
+    90% {transform: translate(-1vw, 0);}
+    100% {transform: translate(0,0);}
+}
+.sound1 iframe {
+    animation: shake2 1s linear 1 forwards;
+}
+
+@keyframes shake2 {
+    0% {transform: translate(0,0);}
+    10% {transform: translate(-1vw, 0);}
+    20% {transform: translate(1vw, 0);}
+    30% {transform: translate(-1vw, 0);}
+    40% {transform: translate(1vw, 0);}
+    50% {transform: translate(-1vw, 0);}
+    60% {transform: translate(1vw, 0);}
+    70% {transform: translate(-1vw, 0);}
+    80% {transform: translate(1vw, 0);}
+    90% {transform: translate(-1vw, 0);}
+    100% {transform: translate(0,0);}
+}
+
+.sound2 {
+    animation: alarm 2s;
+}
+
+@keyframes alarm {
+    0% {
+        background: #292b39;
+    }
+    25% {
+        background: #ff1d25;
+    }
+    50% {
+        background: #0364ff;
+    }
+    100% {
+        background: #292b39;
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-5-21 11:8:39
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation blink-1
+ * ----------------------------------------
+ */
+.sound3 iframe {
+    -webkit-animation: blink-1 1.5s both;
+	        animation: blink-1 1.5s both;
+}
+
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  30%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.sound5 iframe {
+    -webkit-animation: blink-2 1.5s both;
+	        animation: blink-2 1.5s both;
+}
+
+@-webkit-keyframes blink-2 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  30%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-2 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.sound7 iframe {
+    -webkit-animation: blink-3 1.5s both;
+	        animation: blink-3 1.5s both;
+}
+
+@-webkit-keyframes blink-3 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  30%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-3 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.sound9 {
+    animation: good 41s linear;
+}
+@keyframes good {
+    0% {
+        background: #292b39;
+    }
+    99% {
+        background: #000000;
+    }
+    100% {
+        background: #22b573;
+    }
+}
+
+.sound11 {
+    animation: bad 27.2s;
+}
+
+@keyframes bad {
+    0% {
+        background: #292b39;
+    }
+    2% {
+        background: #ff1d25;
+    }
+    5% {
+        background: #292b39;
+    }
+    99% {
+        background: #000000;
+    }
+    100% {
+        background: #ff1d25;
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-5-22 15:10:12
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-out-blurred-bottom
+ * ----------------------------------------
+ */
+.sound13 iframe {
+    -webkit-animation: slide-out-blurred-bottom 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+	        animation: slide-out-blurred-bottom 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+}
+
+@-webkit-keyframes slide-out-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(1000px) scaleY(2) scaleX(0.2);
+            transform: translateY(1000px) scaleY(2) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+
+/* Media Queries - Mobiel */
+
+@media screen and (min-width: 24em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 87vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 80vw;
+        height: 5em;
+        margin-left: 5vw;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 80vw;
+    }
+}
+
+/* Media queries - Tablet */
+
+@media screen and (min-width: 35em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 87vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 81.5vw;
+        height: 4em;
+        margin-left: 4.8vw;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 81.5vw;
+    }
+}
+
+@media screen and (min-width: 40em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 86vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 81.5vw;
+        margin-left: 4.8vw;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 81.5vw;
+    }
+}
+
+@media screen and (min-width: 45em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 85.5vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 81.5vw;
+        margin-left: 4.8vw;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 81.5vw;
+    }
+}
+
+@media screen and (min-width: 50em){
+    .test {
+        opacity: 0;
+    }   
+    #video-placeholder {
+        width: 85vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 81.5vw;
+        margin-left: 4.8vw;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 81.5vw;
+    }
+}
+
+@media screen and (min-width: 55em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 45.5em;
+        margin-left: 3.5em;
+    }
+    #closed-captions {
+        width: 43.5em;
+        margin-left: 3.4em;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 43.5em;
+    }
+}
+
+@media screen and (min-width: 55em) {
+    #video-placeholder {
+        width: 65vw;
+        margin-left: 3.5em;
+        margin-right: ;
+    }
+    #closed-captions {
+        width: 61.5vw;
+        margin-left: 3.4em;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 61.5vw;
+    }
+    .test {
+        opacity: 1;
+        width: 16vw;
+        margin-top: 2.6em;
+        margin-right: 3.2em;
+    }
+    .test p {
+        font-size: 1em;
+    }
+    .test img {
+        width: 17vw;
+    }
+}
+
+@media screen and (min-width: 60em){            #video-placeholder {
+        width: 65vw;
+        margin-left: 3.5em;
+        margin-right: ;
+    }
+    #closed-captions {
+        width: 61.5vw;
+        margin-left: 3.4em;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 61.5vw;
+    }
+    .test {
+        opacity: 1;
+        width: 16vw;
+        margin-top: 4.7vw;
+        margin-right: 6vw;
+    }
+    .test p {
+        font-size: 1em;
+    }
+    .test img {
+        width: 17vw;
+    }
+}
+
+@media screen and (min-width: 65em){     
+     #video-placeholder {
+        width: 65vw;
+        margin-left: 5em;
+        margin-right: ;
+    }
+    #closed-captions {
+        width: 61.5vw;
+        margin-left: 5.3em;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 61.5vw;
+    }
+    .test {
+        opacity: 1;
+        width: 3vw;
+        margin-right: 12.5em;
+        margin-top: -43.7vw;
+    }
+    .test p {
+        font-size: 1em;
+    }
+    .test img {
+        width: 15vw;
+    }
+}
+
+@media screen and (min-width: 68em){     
+     #video-placeholder {
+        width: 65vw;
+        margin-left: 5em;
+        margin-right: ;
+    }
+    #closed-captions {
+        width: 61.5vw;
+        margin-left: 5.3em;
+        margin-top: 0;
+    }
+    #closed-captions {
+        width: 61.5vw;
+    }
+    .test {
+        opacity: 1;
+        width: 3vw;
+        margin-right: 12.5em;
+        margin-top: -42.2vw;
+    }
+    .test p {
+        font-size: 1em;
+    }
+    .test img {
+        width: 15vw;
+    }
+}
+
+/* Media queries - Desktop */
+
+@media screen and (min-width: 70em){
+     #video-placeholder {
+        width: 45.5em;
+        margin-top: 3em;
+        margin-left: 5em;
+        margin-right: 2em;
+        margin-bottom: 3em;
+    }
+    #closed-captions {
+        width: 43.5em;
+        margin-left: 5em;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 43.5em;
+    }
+    .test {
+        opacity: 1;
+        margin-right: 19vw;
+        margin-top: 2.8em;
+    }
+    .test img {
+        width: 15vw;
+    }
+    .test p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 75em){
+     #video-placeholder {
+        width: 45.5em;
+        margin-top: 3em;
+        margin-left: 7vw;
+        margin-right: 2em;
+        margin-bottom: 3em;
+    }
+    #closed-captions {
+        width: 43.5em;
+        margin-left: 7vw;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 43.5em;
+    }
+    .test {
+        opacity: 1;
+        margin-right: 21vw;
+        margin-top: 2.8em;
+    }
+    .test img {
+        width: 15vw;
+    }
+    .test p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 89em){
+     #video-placeholder {
+        width: 45.5em;
+        margin-top: 3em;
+        margin-left: 10em;
+        margin-right: 2em;
+        margin-bottom: 3em;
+    }
+    #closed-captions {
+        width: 43.5em;
+        margin-left: 10em;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 43.5em;
+    }
+    .test {
+        opacity: 1;
+        margin-right: 22em;
+        margin-top: 2.8em;
+    }
+    .test img {
+        width: 15vw;
+    }
+    .test p {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+
+
+
+
