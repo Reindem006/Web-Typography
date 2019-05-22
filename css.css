@@ -2441,6 +2441,25 @@ img {
 
 /* Media Queries - Mobiel */
 
+@media screen and (min-width: 20em){
+    .test {
+        opacity: 0;
+    }
+    #video-placeholder {
+        width: 87vw;
+        margin: 5vw;
+    }
+    #closed-captions {
+        width: 80vw;
+        height: 5em;
+        margin-left: 5vw;
+        margin-top: 0;
+    }
+    #closed-captions p {
+        width: 80vw;
+    }
+}
+
 @media screen and (min-width: 24em){
     .test {
         opacity: 0;
